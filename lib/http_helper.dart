@@ -6,7 +6,7 @@ import 'package:http/http.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class HttpHelper {
-  final String _baseUrl = 'http://localhost:8000/api/';
+  final String _baseUrl = 'http://192.168.0.112:8000/api/';
   final String token = '';
 
   Future<Response> login(String email, String password, String deviceId) async {
@@ -20,7 +20,7 @@ class HttpHelper {
       'Accept': 'application/json',
     };
 
-    final response = await post(url, body: body, headers: headers);
+    final response = await post(url, headers: headers, body: body);
     var data = json.decode(response.body);
     _save('token', data['token']);
     _save('name', data['name']);
