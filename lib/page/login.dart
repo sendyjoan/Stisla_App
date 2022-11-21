@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
-import 'http_helper.dart';
+import '../http_helper.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Login extends StatefulWidget {
@@ -29,12 +29,7 @@ class _Login extends State<Login> {
         context,
         MaterialPageRoute(builder: (context) => Login()),
       );
-    } else {
-      // Navigator.push(
-      //   context,
-      //   MaterialPageRoute(builder: (context) => LandingHome()),
-      // );
-    }
+    } else {}
   }
 
   @override
